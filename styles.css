@@ -59,8 +59,8 @@ html {
 }
 .outermost_circle{
     background-color:white;
-    height: 390px;
-    width: 390px;
+    height: 370px;
+    width: 370px;
     border-radius: 50%;
     z-index: 5;
 }
