@@ -3,7 +3,7 @@ const semicircles = document.querySelectorAll('.semicircle');
 // const dd = 0;
 const hr = 0;
 const min = 0;
-const sec = 10;
+const sec = 20;
 
 // const days = dd * 86400000;
 const hours = hr * 3600000;
