@@ -24,20 +24,24 @@ countDownTimer();
 function countDownTimer() {
 const currentTime = Date.now();
 const remainingTime = futureTime - currentTime;
-
-
 const angle = (remainingTime / setTime) * 360;
 
-if(angle > 190) {
+if(angle > 180) {
     semicircles[2].style.display = 'none';
-    semicircles[o].style.transform = 'rotate(180deg)';
-    semicircles[1].style.transform = 'rotate(${angle}deg)';
+    // semicircles[0].style.background = "black";
+    semicircles[0].style.transform = "rotate(180deg)";
+    semicircles[1].style.transform = `rotate(${angle}deg)`;
 
 } else {
     semicircles[2].style.display = 'block';
-    semicircles[o].style.transform = 'rotate(${angle}deg)';
-    semicircles[1].style.transform = 'rotate(${angle}deg)';
+    semicircles[0].style.transform = `rotate(${angle}deg)`;
+    semicircles[1].style.transform = `rotate(${angle}deg)`;
 
+}
+
+
+if(remainingTime < 0) {
+    clearInterval(timerLoop);
 }
 
 }
