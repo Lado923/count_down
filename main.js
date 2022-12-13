@@ -42,6 +42,9 @@ if(angle > 180) {
 
 if(remainingTime < 0) {
     clearInterval(timerLoop);
+    semicircles[0].style.display = 'none'
+    semicircles[1].style.display = 'none'
+    semicircles[2].style.display = 'none'
 }
 
 }
