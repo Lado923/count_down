@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Heebo', sans-serif;
+    color: #088b8b;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_container {
+    width: 100%;
+    height: 100vh;
+    background-color: orange;
+}
+
+/*progress indicator*/
+
+.circle_container {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1S;
+    overflow: hidden;
+}
+
+.semicircle {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right center;
+}
+
+.semicircle:nth-child(1){
+    background-color: red;
+    z-index: 2;
+}
+.semicircle:nth-child(2){
+    background-color: blue;
+    z-index: 3;
+}
+.semicircle:nth-child(3){
+    background-color:white;
+    z-index: 4 ;
+}
+.outermost_circle{
+    background-color:black;
+    z-index: 5 ;
+    height: 390px;
+    width: 390px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+/* .main_container:hover .semicircle:nth-child(1){
+    transform: rotate(180deg);
+    transition: 1s linear;
+}
+
+
+.main_container:hover .semicircle:nth-child(2){
+    
+    transform: rotate(360deg);
+    transition: 2s linear;
+}
+
+.main_container:hover .semicircle:nth-child(3){
+    opacity: 0;
+    transition: opacity 0s 1s;
+} */
