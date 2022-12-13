@@ -78,6 +78,21 @@ if(remainingTime < 0) {
     semicircles[0].style.display = 'none'
     semicircles[1].style.display = 'none'
     semicircles[2].style.display = 'none'
+
+    timer.innerHTML = `
+<div class="timer_text">
+<div class="days">
+<div>0 days</div>
+</div>
+<div class="time">
+<div>00</div>
+<div class="colon">:</div>
+<div>00</div>
+<div class="colon">:</div>
+<div>00</div>
+</div>
+</div>
+`
 }
 
 }
