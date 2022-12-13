@@ -102,10 +102,10 @@ html {
 }
 
 .timer div {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 100;
-    width: 80px;
-    height: 80px;
+    width: 320px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,3 +119,14 @@ html {
     margin-right: 0;
     padding-bottom: 15px;
 }
+
+.timer_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.days {
+    width: 80px;
+}
+
+

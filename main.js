@@ -1,4 +1,6 @@
 const semicircles = document.querySelectorAll('.semicircle');
+const timer = document.querySelector('.timer');
+
 
 // const dd = 0;
 const hr = 0;
@@ -15,7 +17,6 @@ const setTime = hours + minutes + seconds;
 // const futureTime = new Date('January 16, 2023 05:35:00');
 const startTime = Date.now();
 const futureTime = startTime + setTime;
-
 
 
 const timerLoop = setInterval(countDownTimer);
@@ -38,6 +39,38 @@ if(angle > 180) {
     semicircles[1].style.transform = `rotate(${angle}deg)`;
 
 }
+
+// timer
+const dds = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+let daysName = "days";
+if (dds == 1) {
+    daysName = "day";
+} else {
+    daysName = "days";
+}
+
+const hrs = Math.floor((remainingTime / (1000 * 60 * 60)) % 24);
+const mins = Math.floor((remainingTime / (1000 * 60 )) % 60);
+const secs = Math.floor((remainingTime / (1000)) % 60);
+
+timer.innerHTML = `
+<div class="timer_text">
+<div class="days">
+<div>${dds + " " + daysName}</div>
+</div>
+<div class="time">
+<div>${hrs}</div>
+<div class="colon">:</div>
+<div>${mins}</div>
+<div class="colon">:</div>
+<div>${secs}</div>
+</div>
+</div>
+`
+
+
+
+
 
 
 if(remainingTime < 0) {
