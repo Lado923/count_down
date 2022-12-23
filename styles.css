@@ -11,6 +11,14 @@ html {
     color: #088b8b;
 }
 
+
+.all_container {
+    height: 90vh;
+    width: 300vw;
+   position: absolute;
+}
+
+
 .center {
     display: flex;
     justify-content: center;
@@ -19,15 +27,13 @@ html {
 
 .main_container {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-color: white;
 }
 
 /*progress indicator*/
 
 .circle_container {
-    width: 400px;
-    height: 400px;
     background-color: #ddd;
     border-radius: 50%;
     position: absolute;
@@ -59,8 +65,6 @@ html {
 }
 .outermost_circle{
     background-color:white;
-    height: 370px;
-    width: 370px;
     border-radius: 50%;
     z-index: 5;
 }
@@ -102,8 +106,8 @@ html {
 }
 
 .timer div {
-    font-size: 60px;
-    font-weight: 100;
+    font-size: 5rem;
+    font-weight: 300;
     width: 320px;
     height: 100px;
     display: flex;
