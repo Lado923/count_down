@@ -50,13 +50,49 @@ y1 = null;
 
 //
 
+
+//controls
+const controls = document.querySelectorAll('.controls');
+controls.forEach(item => {
+item.addEventListener('click', function(){
+    for (let i = 0; i < controls.length; i++) {
+        if (controls[i] == item) {
+            count = i;
+            rollSlider();
+            controlsStyle()
+}
+    }
+
+});
+});
+
+
+
+
+function controlsStyle() {
+    controls.forEach( item => {
+        item.style.width = "20px";
+    });
+    controls[count].style.width = 'calc(+50%)';
+    controls[count].style.transition = 'all ease 1s';
+
+}
+
+
+
+
+
+
+
 function init() {
     width = document.querySelector('.slider').offsetWidth;
     sliderLine.style.width = width*sliders.length + "px";
     sliders.forEach( item => {
         item.style.width = width + 'px';
     });
+
 }
+    
 
 window.addEventListener('resize', init);
 init();
@@ -70,6 +106,7 @@ document.querySelector('.slider_next').addEventListener('click', function(){
 
 function leftSkroll(){
         count--;
+        controlsStyle()
         if (count < 0) {
             count = sliders.length - 1;
         }
@@ -79,6 +116,7 @@ function leftSkroll(){
 
 function rightSkroll(){
         count++;
+        controlsStyle()
         if (count >= sliders.length) {
             count = 0;
         }

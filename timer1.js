@@ -2,6 +2,7 @@ const semicircles = document.querySelectorAll('.semicircle');
 const timer = document.querySelector('.timer');
 const circleSize = document.querySelector('.circle_container')
 const outermostSize = document.querySelector('.outermost_circle')
+const buttons = document.querySelectorAll('.slider-button')
 
 
 
