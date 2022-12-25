@@ -2,7 +2,7 @@ const semicircles = document.querySelectorAll('.semicircle');
 const timer = document.querySelector('.timer');
 const circleSize = document.querySelector('.circle_container')
 const outermostSize = document.querySelector('.outermost_circle')
-const buttons = document.querySelectorAll('.slider-button')
+const buttons = document.querySelectorAll('.slider-button');
 
 
 
@@ -13,12 +13,16 @@ if(document.documentElement.clientHeight > document.documentElement.clientWidth)
     circleSize.style.height = '70vw';
     outermostSize.style.width = '65vw';
     outermostSize.style.height = '65vw';
+    // buttons.style.width = '65vw';
+    // buttons.style.height = '65vw';
     
 } else {
     circleSize.style.width = '70vh';
     circleSize.style.height = '70vh';
     outermostSize.style.width = '65vh';
     outermostSize.style.height = '65vh';
+    // buttons.style.width = '65vh';
+    // buttons.style.height = '65vh';
 }
 
 
@@ -28,7 +32,7 @@ const futureTime = Date.parse(new Date('January 16, 2023 05:35:00'));
 const intervalTime = futureTime - setTime;
 
 
-const timerLoop = setInterval(countDownTimer);
+const timerLoop = setInterval(countDownTimer, 1000);
 countDownTimer();
 
 function countDownTimer() {

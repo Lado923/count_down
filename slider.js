@@ -106,21 +106,21 @@ document.querySelector('.slider_next').addEventListener('click', function(){
 
 function leftSkroll(){
         count--;
-        controlsStyle()
         if (count < 0) {
             count = sliders.length - 1;
         }
         rollSlider();
+        controlsStyle()
 
 }
 
 function rightSkroll(){
         count++;
-        controlsStyle()
         if (count >= sliders.length) {
             count = 0;
         }
         rollSlider();
+        controlsStyle()
 }
 
 function rollSlider(){
