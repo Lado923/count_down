@@ -8,7 +8,7 @@
 }
 .timer2_text {
     margin: auto;
-    font-size: 4.5rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@
 }
 
 .timer2_counter {
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .timer2_animation__container {
@@ -46,5 +46,5 @@
 }
 
 .timer2_counter_second{
-    font-size: 3.5rem;
+    font-size: 1.5rem;
 }
