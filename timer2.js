@@ -80,6 +80,12 @@ if((daysCurrent < 24) || (daysCurrent == 24 && hoursCurrent < 22)) {
     DD = daysCurrent - 24;
 }
 
+//fix days number between 22 and 00 h
+
+if((hoursCurrent >= 22) && (hoursCurrent <= 23)){
+        DD == daysCurrent ++
+}
+
 
 //Hours
 
