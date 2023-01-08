@@ -3,6 +3,8 @@ const timer = document.querySelector('.timer');
 const circleSize = document.querySelector('.circle_container')
 const outermostSize = document.querySelector('.outermost_circle')
 const buttons = document.querySelectorAll('.slider-button');
+const maincont = document.querySelector('.main_container');
+const maincont2 = document.querySelector('.timer2_container');
 
 
 
@@ -13,16 +15,20 @@ if(document.documentElement.clientHeight > document.documentElement.clientWidth)
     circleSize.style.height = '70vw';
     outermostSize.style.width = '65vw';
     outermostSize.style.height = '65vw';
-    // buttons.style.width = '65vw';
-    // buttons.style.height = '65vw';
+    maincont.style.width = '75vw';
+    maincont.style.height = '75vw';
+    maincont2.style.width = '75vw';
+    maincont2.style.height = '75vw';
     
 } else {
     circleSize.style.width = '70vh';
     circleSize.style.height = '70vh';
     outermostSize.style.width = '65vh';
     outermostSize.style.height = '65vh';
-    // buttons.style.width = '65vh';
-    // buttons.style.height = '65vh';
+    maincont.style.width = '75vh';
+    maincont.style.height = '75vh';
+    maincont2.style.width = '75vh';
+    maincont2.style.height = '75vh';
 }
 
 
