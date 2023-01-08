@@ -6,8 +6,8 @@ countTimer();
 
 function countTimer() {
 
-// const CurrentTime = new Date();
-const CurrentTime = new Date(2023,0,24,0,45,17);
+const CurrentTime = new Date();
+// const CurrentTime = new Date(2023,0,24,0,45,17);
 const StartTime = new Date(2022,5,24,22,0,0)
 
 const yearsStart = StartTime.getFullYear();
