@@ -8,8 +8,28 @@
 
 html {
     font-family: 'Heebo', sans-serif;
-    color: #088b8b;
+    color: #23a6d5;
 }
+
+body{
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 
 .all_container {
@@ -26,9 +46,11 @@ html {
 }
 
 .main_container {
-    width: 100%;
+    width: 50%;
     height: 80vh;
     background-color: white;
+    margin: auto;
+    border-radius: 25%;
 }
 
 /*progress indicator*/
@@ -51,11 +73,11 @@ html {
 }
 
 .semicircle:nth-child(1){
-    background-color: #088b8b;
+    background-color: #23a6d5;
     z-index: 2;
 }
 .semicircle:nth-child(2){
-    background-color: #088b8b;
+    background-color: #23a6d5;
     z-index: 3;
 }
 .semicircle:nth-child(3){

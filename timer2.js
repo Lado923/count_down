@@ -6,8 +6,8 @@ countTimer();
 
 function countTimer() {
 
-const CurrentTime = new Date();
-// const CurrentTime = new Date(2023,7,23,23,45,17);
+// const CurrentTime = new Date();
+const CurrentTime = new Date(2023,0,24,0,45,17);
 const StartTime = new Date(2022,5,24,22,0,0)
 
 const yearsStart = StartTime.getFullYear();
@@ -32,10 +32,11 @@ const minutesDiff = minutesCurrent - minutesStart;
 const secsDiff = secsCurrent - secsStart;
 
 
+
 // Months and Years
 
 if(monthsDiff > 0) {
-    if((daysCurrent == 24 && hoursCurrent >= 22) ||(daysCurrent > 24)){
+    if((daysCurrent == daysStart && hoursCurrent >= hoursStart) ||(daysCurrent > daysStart)){
         YY = yearsDiff;
         MM = monthsDiff;
     } else {
@@ -43,15 +44,15 @@ if(monthsDiff > 0) {
         MM = monthsDiff - 1;
     }
 } else if(monthsDiff < 0) {
-    if((daysCurrent == 24 && hoursCurrent >= 22) || (daysCurrent > 24)){
+    if((daysCurrent == daysStart && hoursCurrent >= hoursStart) || (daysCurrent > daysStart)){
         YY = yearsDiff - 1;
         MM = 7 + monthsCurrent;
     } else {
         YY = yearsDiff -1;
-        MM = 11;
+        MM = 6 + monthsCurrent;
     }
 }else if(monthsDiff == 0) {
-    if((daysCurrent == 24 && hoursCurrent < 22) || (monthsDiff == 0 && daysCurrent < 24)){
+    if((daysCurrent == daysStart && hoursCurrent < hoursStart) || (monthsDiff == 0 && daysCurrent < daysStart)){
         YY = yearsDiff -1;
         MM = 11;
     } else {
@@ -64,33 +65,33 @@ if(monthsDiff > 0) {
 
 
 // Days
-if((daysCurrent < 24) || (daysCurrent == 24 && hoursCurrent < 22)) {
+if((daysCurrent < daysStart) || (daysCurrent == daysStart && hoursCurrent < hoursStart)) {
     if([0,3,5,7,8,10].includes(monthsCurrent)){
-        DD = daysCurrent + 7;
-    } else if ([4,6,9,11].includes(monthsCurrent)) {
         DD = daysCurrent + 6;
+    } else if ([4,6,9,11].includes(monthsCurrent)) {
+        DD = daysCurrent + 7;
     } else if (monthsCurrent == 2) {
         if ((yearsCurrent % 4) == 0 && (yearsCurrent % 100) == 0 && (yearsCurrent % 400) == 0 ) {
-            DD = daysCurrent + 5;
-        } else {
             DD = daysCurrent + 4;
+        } else {
+            DD = daysCurrent + 3;
         }
     }    
 } else {
-    DD = daysCurrent - 24;
+    DD = daysCurrent - daysStart - 1;
 }
 
-//fix days number between 22 and 00 h
+//fix days number between hoursStart and 00 h
 
-if((hoursCurrent >= 22) && (hoursCurrent <= 23)){
-        DD == daysCurrent ++
+if(hoursCurrent >= hoursStart){
+        DD = DD + 1;
 }
 
 
 //Hours
 
-if(hoursCurrent >= 22) {
-    HH = hoursCurrent - 22;
+if(hoursCurrent >= hoursStart) {
+    HH = hoursCurrent - hoursStart;
 } else {
     HH = hoursCurrent + 2;
 };

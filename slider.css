@@ -84,16 +84,17 @@
     width: 20px;
     height: 10px;
     border-radius: 25px;
-    background-color: rgb(168, 166, 166);
+    background-color: white;
+    opacity: 0.5;
     
 }
 
 .constrols:hover{
-    background-color: rgb(216, 213, 213);
+    opacity: 1;
 }
 
 .constrols:active{
-    background-color: rgb(125, 125, 125);
+    opacity: 0.2;
 }
 
 .current_control {

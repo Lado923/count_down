@@ -4,8 +4,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 50vh;
+    height: 80vh;
+    width: 50%;
+    background: white;
+    border-radius: 25%;
 }
+
 .timer2_text {
     margin: auto;
     font-size: 2rem;
