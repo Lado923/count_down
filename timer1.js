@@ -33,8 +33,8 @@ if(document.documentElement.clientHeight > document.documentElement.clientWidth)
 
 
 
-const setTime = Date.parse(new Date('December 5, 2022 19:00:00'));
-const futureTime = Date.parse(new Date('January 16, 2023 01:00:00'));
+const setTime = Date.parse(new Date('January 27, 2023 12:37:00'));
+const futureTime = Date.parse(new Date('January 27, 2023 19:00:00'));
 const intervalTime = futureTime - setTime;
 
 
